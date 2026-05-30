@@ -9,7 +9,7 @@ Each writeup documents a real exercise including tools used, observations, and s
 
 | Writeup | Topic | Tools | Date |
 |---|---|---|---|
-| [Wireshark Network Analysis](writeups/wireshark-network-analysis.md) | DNS, ARP, TCP, TLS, HTTP vs HTTPS | Wireshark | May 2025 |
+| [Wireshark Network Analysis](wireshark-network-analysis.md) | DNS, ARP, TCP, TLS, HTTP vs HTTPS | Wireshark | May 2025 |
 
 More writeups coming soon as I progress through the study plan.
 
