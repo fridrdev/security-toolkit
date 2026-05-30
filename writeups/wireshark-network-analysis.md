@@ -1,6 +1,6 @@
 # Wireshark Network Analysis: Practical Writeup
 
-> **Author:** Amin  
+> **Author:** Mohamed Amin  
 > **Date:** May 2025  
 > **Tools used:** Wireshark, Windows ipconfig  
 > **Interface captured:** Wi-Fi (192.168.1.10)
@@ -33,7 +33,7 @@ A /24 subnet means 256 addresses total: 1 network address (192.168.1.0), 1 broad
 
 DNS (Domain Name System) translates human-readable domain names into IP addresses. Every time you visit a website, your computer first sends a DNS query before establishing any connection.
 
-![DNS analysis](images/01-dns-analysis.png)
+![DNS analysis](images/01-dns-analysis.png.png)
 
 ### What I observed
 
@@ -67,7 +67,7 @@ Even before any connection is established, DNS queries reveal which services a m
 
 ARP (Address Resolution Protocol) operates at Layer 2 of the OSI model. It maps IP addresses to MAC addresses within the local network. When a device wants to communicate with another device on the same network, it broadcasts an ARP request: "Who has IP x.x.x.x? Tell me your MAC address."
 
-![ARP device discovery](images/07-arp-device-discovery.png)
+![ARP device discovery](images/07-arp-device-discovery.png.png)
 
 ### Devices identified on the network
 
@@ -101,7 +101,7 @@ This is directly related to the WPAD attack described above. Both attacks aim to
 
 TCP (Transmission Control Protocol) operates at Layer 4 of the OSI model. Before any data is exchanged, TCP establishes a connection using a 3-way handshake. This is only for connection setup and no data is transferred during the handshake itself.
 
-![TCP SYN handshake](images/02-tcp-handshake-syn.png)
+![TCP SYN handshake](images/02-tcp-handshake-syn.png.png)
 
 ### The 3-way handshake explained
 
@@ -126,7 +126,7 @@ Packet 562: 142.251.39.142 -> 192.168.1.10  [SYN,ACK] Seq=0  Ack=1
 
 After the handshake is complete, the data transfer begins. The screenshot below shows what a TCP stream looks like after TLS encryption is applied. The content is completely unreadable.
 
-![TCP stream encrypted](images/03-tcp-stream-encrypted.png)
+![TCP stream encrypted](images/03-tcp-stream-encrypted.png.png)
 
 ### TCP Retransmission: loss detection in action
 
@@ -150,11 +150,11 @@ This is the most visually striking difference in the entire capture.
 
 Using `http://neverssl.com`, a site intentionally kept on HTTP for testing purposes, the request and response were fully readable in Wireshark.
 
-![HTTP plaintext filter](images/05-http-plaintext.png)
+![HTTP plaintext filter](images/05-http-plaintext.png.png)
 
 The filter shows packet 39 as a GET request and packet 43 as a 200 OK response with the full HTML content. The screenshot below shows the actual content of that HTTP stream, fully readable by anyone on the network.
 
-![HTTP stream readable](images/06-http-stream-readable.png)
+![HTTP stream readable](images/06-http-stream-readable.png.png)
 
 The entire HTML page, headers, CSS, and any cookies are visible in plaintext. This is why HTTP is considered insecure for any sensitive communication.
 
@@ -162,7 +162,7 @@ The entire HTML page, headers, CSS, and any cookies are visible in plaintext. Th
 
 The screenshot below shows the full sequence from HTTP to HTTPS on the same capture, demonstrating both protocols side by side.
 
-![Full HTTP vs HTTPS comparison](images/08-full-http-https-comparison.png)
+![Full HTTP vs HTTPS comparison](images/08-full-http-https-comparison.png.png)
 
 ```
 Packet 39:  GET / HTTP/1.1                 HTTP request fully readable
@@ -180,7 +180,7 @@ Packet 60:  Change Cipher Spec            Encryption starts, nothing readable af
 
 **Filter used:** `tls.handshake.type == 1`
 
-![TLS Client Hello and SNI](images/04-tls-client-hello-sni.png)
+![TLS Client Hello and SNI](images/04-tls-client-hello-sni.png.png)
 
 Even with HTTPS, the Server Name Indication (SNI) field in the Client Hello is sent in plaintext. This means your ISP, your router, and anyone on the same network can see which domains you visit. Only the content of your communication is encrypted, not the destination.
 
