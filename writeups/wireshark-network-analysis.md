@@ -45,7 +45,7 @@ DNS (Domain Name System) translates human-readable domain names into IP
 addresses. Every time you visit a website, your computer first sends a DNS
 query before establishing any connection.
 
-![DNS analysis](images/wireshark/01-dns-analysis.png.png)
+![DNS analysis](images/wireshark/01-dns-analysis.png)
 
 ### What I observed
 
@@ -95,7 +95,7 @@ maps IP addresses to MAC addresses within the local network. When a device wants
 to communicate with another device on the same network, it broadcasts an ARP
 request asking who has a specific IP address.
 
-![ARP device discovery](images/wireshark/07-arp-device-discovery.png.png)
+![ARP device discovery](images/wireshark/07-arp-device-discovery.png)
 
 ### Devices identified on the network
 
@@ -135,7 +135,7 @@ Before any data is exchanged, TCP establishes a connection using a 3-way
 handshake. This is only for connection setup and no data is transferred during
 the handshake itself.
 
-![TCP SYN handshake](images/wireshark/02-tcp-handshake-syn.png.png)
+![TCP SYN handshake](images/wireshark/02-tcp-handshake-syn.png)
 
 ### The 3-way handshake explained
 
@@ -160,7 +160,7 @@ After the handshake completes, data transfer begins. The screenshot below shows
 what a TCP stream looks like after TLS encryption is applied. The content is
 completely unreadable.
 
-![TCP stream encrypted](images/wireshark/03-tcp-stream-encrypted.png.png)
+![TCP stream encrypted](images/wireshark/03-tcp-stream-encrypted.png)
 
 ### TCP Retransmission: loss detection in action
 
@@ -183,20 +183,20 @@ is immediately retransmitted. This is called Fast Retransmit and is much faster.
 Using http://neverssl.com, a site intentionally kept on HTTP for testing, the
 request and response were fully readable in Wireshark.
 
-![HTTP plaintext filter](images/wireshark/05-http-plaintext.png.png)
+![HTTP plaintext filter](images/wireshark/05-http-plaintext.png)
 
 The filter shows packet 39 as a GET request and packet 43 as a 200 OK response
 with full HTML content. The screenshot below shows the actual HTTP stream content,
 fully readable by anyone on the network.
 
-![HTTP stream readable](images/wireshark/06-http-stream-readable.png.png)
+![HTTP stream readable](images/wireshark/06-http-stream-readable.png)
 
 ### HTTPS: TLS encryption
 
 The screenshot below shows the full sequence from HTTP to HTTPS on the same
 capture, demonstrating both protocols side by side.
 
-![Full HTTP vs HTTPS comparison](images/wireshark/08-full-http-https-comparison.png.png)
+![Full HTTP vs HTTPS comparison](images/wireshark/08-full-http-https-comparison.png)
 
 ```
 Packet 39:  GET / HTTP/1.1                 HTTP request fully readable
@@ -214,7 +214,7 @@ Packet 60:  Change Cipher Spec            Encryption starts, nothing readable af
 
 **Filter used:** `tls.handshake.type == 1`
 
-![TLS Client Hello and SNI](images/wireshark/04-tls-client-hello-sni.png.png)
+![TLS Client Hello and SNI](images/wireshark/04-tls-client-hello-sni.png)
 
 Even with HTTPS, the SNI field in the Client Hello is sent in plaintext. Your
 ISP, router, and anyone on the same network can see which domains you visit.
