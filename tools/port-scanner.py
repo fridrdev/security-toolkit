@@ -27,6 +27,6 @@ def scan_target(ip, ports):
     print(f"\n{len(open_ports)} open ports found.")
     return open_ports
 
-common_ports = [21, 22, 23, 25, 53, 80, 443, 3389, 8080]
+common_ports = [21, 22, 23, 25, 53, 80, 443, 3389, 8080] #YOU CAN ADD MORE PORTS IF YOU WANT
 target = "127.0.0.1" #YOUR_TARGET_IP
 scan_target(target, common_ports)
