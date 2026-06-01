@@ -1,4 +1,4 @@
-# Day 2: Port Scanner: Building a TCP Port Scanner from Scratch
+# Port Scanner: Building a TCP Port Scanner from Scratch
 
 > **Author:** Amin
 > **Date:** June 2026
@@ -12,8 +12,8 @@
 
 A port scanner checks which ports are open on a target machine. Each open port
 represents a service running and listening for connections. From a security
-perspective open ports are potential entry points for attackers. Knowing
-which ones are exposed is the first step of any network security audit.
+perspective open ports are potential entry points for attackers. Knowing which
+ones are exposed is the first step of any network security audit.
 
 This is exactly what tools like Nmap, Nessus, and Qualys do at their core.
 They attempt connections on ports and report what is open. I built a simplified
@@ -82,16 +82,16 @@ between your script and another machine.
 **socket.socket(socket.AF_INET, socket.SOCK_STREAM)** creates a TCP socket
 using IPv4 addressing. AF_INET means IPv4, SOCK_STREAM means TCP.
 
-**sock.settimeout(1)** tells the socket to wait maximum 1 second for a
-response. Without this the script would hang forever on closed or filtered ports.
+**sock.settimeout(1)** tells the socket to wait maximum 1 second for a response.
+Without this the script would hang forever on closed or filtered ports.
 
 **sock.connect_ex((ip, port))** is the actual knock on the door. Returns 0 if
 the connection succeeded meaning port is open, anything else means port is closed.
 
-**return result == 0** converts the number to True or False. Clean and simple.
+**return result == 0** converts the number to True or False.
 
-**try/except** is a safety net. If anything goes wrong such as invalid IP, network
-drop, or OS error, the function returns False instead of crashing.
+**try/except** is a safety net. If anything goes wrong such as invalid IP,
+network drop, or OS error, the function returns False instead of crashing.
 
 **scan_target** is the manager function. It loops through every port, calls
 scan_port for each one, prints results in real time, and returns the full list
@@ -112,6 +112,8 @@ call scan_port on its own for a single port check without running a full scan.
 ---
 
 ## Scan Results
+
+![Port scanner output](images/port-scanner/port-scanner-output.png)
 
 ```
 Scanning: 192.168.1.1
@@ -141,18 +143,18 @@ of sending every DNS query to the ISP, the router handles them locally for all
 devices on the network. This improves speed and reduces external dependency.
 
 Security note: DNS on port 53 should only be accessible internally. If exposed
-to the internet it could be abused for DNS amplification attacks. This is a type
-of DDoS where attackers send small requests that generate large responses, using
-your server as an unwitting amplifier.
+to the internet it could be abused for DNS amplification attacks, a type of
+DDoS where attackers send small requests that generate large responses.
 
 ### Port 80: HTTP
 
 The router admin panel is accessible over unencrypted HTTP. This means anyone
 on the same network could intercept traffic between a browser and the router
-admin interface using a tool like Wireshark, which I demonstrated in Day 1.
+admin interface using a tool like Wireshark, which I demonstrated in the
+Wireshark writeup.
 
-Security recommendation: disable HTTP access on the router and force HTTPS
-only. Never manage network equipment over unencrypted connections.
+Security recommendation: disable HTTP access on the router and force HTTPS only.
+Never manage network equipment over unencrypted connections.
 
 ### Port 443: HTTPS
 
@@ -182,16 +184,16 @@ connections to its admin panel. This is a security misconfiguration. HTTP
 should be disabled and all traffic forced through HTTPS only.
 
 An attacker on the same network could perform a Man-in-the-Middle attack on
-the HTTP connection and intercept router credentials if an administrator
-logs in over port 80 instead of 443. This directly connects to what I observed
-in the Wireshark analysis from Day 1 where HTTP traffic is fully readable in plaintext.
+the HTTP connection and intercept router credentials if an administrator logs
+in over port 80 instead of 443. This directly connects to what I observed in
+the Wireshark analysis where HTTP traffic is fully readable in plaintext.
 
 ---
 
 ## Connection to TCP Knowledge
 
-Building this scanner reinforced the TCP concepts from Day 1. When connect_ex()
-returns 0 it means the TCP 3-way handshake completed successfully:
+Building this scanner reinforced the TCP concepts from the Wireshark session.
+When connect_ex() returns 0 it means the TCP 3-way handshake completed:
 
 ```
 My script sends SYN to port 80
@@ -204,20 +206,18 @@ When connect_ex() returns anything other than 0 either:
 - The target sent RST meaning connection refused, port closed
 - No response came within 1 second meaning filtered by firewall
 
-This is exactly what I saw live in Wireshark during the Day 1 session.
-
 ---
 
 ## What I Learned
 
-Building this scanner from scratch taught me how TCP connections work at the
-code level. The socket library gives direct access to the OS networking stack,
-the same stack that every network application uses under the hood.
+Building this scanner from scratch showed how TCP connections work at the code
+level. The socket library gives direct access to the OS networking stack, the
+same stack that every network application uses under the hood.
 
 The key insight: a port scanner is just a tool that tries to complete a TCP
 handshake on each port and reports the result. All the complexity in enterprise
-tools like Nmap comes from optimizations such as parallel scanning, OS fingerprinting,
-and service detection built on top of this same fundamental concept.
+tools like Nmap comes from optimizations such as parallel scanning, OS
+fingerprinting, and service detection built on top of this same fundamental concept.
 
 ---
 
