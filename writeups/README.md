@@ -12,7 +12,8 @@ and security findings.
 |---|---|---|
 | [Wireshark Network Analysis](wireshark-network-analysis.md) | DNS, ARP, TCP, TLS, HTTP vs HTTPS | Wireshark |
 | [Port Scanner Analysis](port-scanner-analysis.md) | TCP scanning, open port analysis, security findings | Python |
-| [Crypto Demo Analysis](crypto-demo-analysis.md) | Hashing, symmetric and asymmetric encryption, TLS flow | Python |
+| [Crypto Demo Analysis](crypto-demo-analysis.md) | Hashing, AES, RSA, TLS flow | Python |
+| [Juice Shop Analysis](juice-shop-analysis.md) | SQLi, XSS, security through obscurity | OWASP Juice Shop, Docker |
 
 ---
 
@@ -43,3 +44,6 @@ Every writeup follows the same structure:
 - RSA asymmetric encryption
 - How TLS combines RSA and AES
 - CIA Triad mapped to cryptographic concepts
+- SQL Injection hands-on exploit
+- Cross-Site Scripting hands-on exploit
+- Security through obscurity weakness

@@ -1,9 +1,9 @@
 # security-toolkit
 
 Cybersecurity learning portfolio by Mohamed Amin. Hands-on tools, writeups and
-study notes covering network analysis, cryptography, penetration testing basics,
-and cloud security. Built while preparing for a cybersecurity internship at
-Deloitte Belgium.
+study notes covering network analysis, cryptography, web vulnerabilities,
+penetration testing basics, and cloud security. Built while preparing for a
+cybersecurity internship at Deloitte Belgium.
 
 ---
 
@@ -25,6 +25,7 @@ Practical security analysis based on real hands-on work.
 | [Wireshark Network Analysis](writeups/wireshark-network-analysis.md) | DNS, ARP, TCP, TLS, HTTP vs HTTPS |
 | [Port Scanner Analysis](writeups/port-scanner-analysis.md) | TCP scanning, open port analysis, security findings |
 | [Crypto Demo Analysis](writeups/crypto-demo-analysis.md) | Hashing, AES, RSA, TLS flow |
+| [Juice Shop Analysis](writeups/juice-shop-analysis.md) | SQLi, XSS, security through obscurity |
 
 ### Notes
 Study notes per topic covered. Short and to the point.
@@ -34,6 +35,7 @@ Study notes per topic covered. Short and to the point.
 | [OSI, TCP/UDP, IP Addressing](notes/osi-tcp-ip-networking-basics.md) | OSI model, TCP vs UDP, subnetting, Wireshark observations |
 | [DNS, DHCP, HTTP/S, Firewalls, VPN](notes/dns-dhcp-http-firewall-vpn.md) | DNS resolution, DHCP, HTTP vs HTTPS, stateless vs stateful, IPsec vs SSL-VPN |
 | [CIA Triad, Encryption, Authentication](notes/cia-triad-encryption-auth.md) | CIA triad, hashing, AES, RSA, TLS, AAA model |
+| [OWASP, Attacks, CVE/CVSS](notes/owasp-attacks-cve.md) | SQLi, XSS, Broken Auth, IDOR, phishing, MITM, ransomware, CVE, CVSS |
 
 ---
 
@@ -51,7 +53,7 @@ Profile: [fridr](https://profile.hackthebox.com/profile/019e3f1e-916d-72e5-902a-
 
 ## Stack
 
-Python, Wireshark, Nmap, Docker, Azure, HTB Academy
+Python, Wireshark, Nmap, Docker, OWASP Juice Shop, Azure, HTB Academy
 
 ---
 
