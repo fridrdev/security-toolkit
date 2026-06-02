@@ -1,6 +1,6 @@
 # Port Scanner: Building a TCP Port Scanner from Scratch
 
-> **Author:** Amin
+> **Author:** Mohamed Amin
 > **Date:** June 2026
 > **Tool:** Custom Python TCP Port Scanner
 > **Target:** Home router
