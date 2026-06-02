@@ -45,7 +45,7 @@ Actively practicing on HackTheBox Academy alongside this portfolio.
 - Cyber Starter badge: Introduction to Information Security
 - Solid Basis badge: Network Foundations
 
-Profile: https://app.hackthebox.com/profile/fridr
+Profile: [fridr](https://profile.hackthebox.com/profile/019e3f1e-916d-72e5-902a-8bad1df9de7c)
 
 ---
 
