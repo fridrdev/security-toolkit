@@ -1,6 +1,6 @@
 # Wireshark Network Analysis: Practical Writeup
 
-> **Author:** Amin
+> **Author:** Mohamed Amin
 > **Date:** May 2026
 > **Tools used:** Wireshark, Windows ipconfig
 > **Interface captured:** Wi-Fi (192.168.1.10)
