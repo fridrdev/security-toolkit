@@ -12,6 +12,7 @@ and security findings.
 |---|---|---|
 | [Wireshark Network Analysis](wireshark-network-analysis.md) | DNS, ARP, TCP, TLS, HTTP vs HTTPS | Wireshark |
 | [Port Scanner Analysis](port-scanner-analysis.md) | TCP scanning, open port analysis, security findings | Python |
+| [Crypto Demo Analysis](crypto-demo-analysis.md) | Hashing, symmetric and asymmetric encryption, TLS flow | Python |
 
 ---
 
@@ -19,9 +20,9 @@ and security findings.
 
 Every writeup follows the same structure:
 
-- Lab setup: interface, IP configuration, tools used
-- What I observed: real packet captures with screenshots
-- Security findings: what each observation means from a security perspective
+- Lab setup: tools and environment used
+- What I built or observed: code, captures, or output with screenshots
+- Security findings: what each result means from a security perspective
 - Key takeaways: practical lessons learned
 
 ---
@@ -37,3 +38,8 @@ Every writeup follows the same structure:
 - OSI model mapped to real traffic
 - TCP port scanning with raw Python sockets
 - Open port analysis and security implications
+- SHA-256 hashing and the avalanche effect
+- AES symmetric encryption
+- RSA asymmetric encryption
+- How TLS combines RSA and AES
+- CIA Triad mapped to cryptographic concepts

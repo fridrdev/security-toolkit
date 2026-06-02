@@ -1,7 +1,7 @@
 # Tools
 
 Security tools built from scratch using Python.
-Each tool is documented with an explanation of how it works and real scan results.
+Each tool is documented with an explanation of how it works and real results.
 
 ---
 
@@ -10,19 +10,27 @@ Each tool is documented with an explanation of how it works and real scan result
 | Tool | Description | Language |
 |---|---|---|
 | [port-scanner.py](port-scanner.py) | TCP port scanner using raw sockets | Python |
+| [crypto-demo.py](crypto-demo.py) | Hashing, symmetric and asymmetric encryption demo | Python |
 
 ---
 
 ## How to run
 
-Make sure you have Python 3 installed. No external libraries needed.
+Make sure you have Python 3 installed.
 
-```bash
+Port scanner (no dependencies):
+```
 python port-scanner.py
 ```
 
-Before running, open the file and change the target IP to your own machine or network.
-Only scan machines you own or have explicit permission to scan.
+Crypto demo (requires cryptography library):
+```
+pip install cryptography
+python crypto-demo.py
+```
+
+Before running the port scanner, open the file and change the target IP to your
+own machine or network. Only scan machines you own or have explicit permission to scan.
 
 ---
 
