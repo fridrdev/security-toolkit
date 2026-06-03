@@ -16,6 +16,7 @@ Custom security tools built from scratch in Python.
 |---|---|
 | [port-scanner.py](tools/port-scanner.py) | TCP port scanner using raw Python sockets |
 | [crypto-demo.py](tools/crypto-demo.py) | Hashing, symmetric and asymmetric encryption demo |
+| [azure-security-checker.py](tools/azure-security-checker.py) | Automated Azure security baseline audit |
 
 ### Writeups
 Practical security analysis based on real hands-on work.
@@ -26,6 +27,7 @@ Practical security analysis based on real hands-on work.
 | [Port Scanner Analysis](writeups/port-scanner-analysis.md) | TCP scanning, open port analysis, security findings |
 | [Crypto Demo Analysis](writeups/crypto-demo-analysis.md) | Hashing, AES, RSA, TLS flow |
 | [Juice Shop Analysis](writeups/juice-shop-analysis.md) | SQLi, XSS, security through obscurity |
+| [Azure Security Checker Analysis](writeups/azure-security-checker-analysis.md) | Cloud security audit, NSG rules, storage access |
 
 ### Notes
 Study notes per topic covered. Short and to the point.
@@ -41,13 +43,22 @@ Study notes per topic covered. Short and to the point.
 
 ## HackTheBox
 
-Actively practicing on HackTheBox Academy alongside this portfolio.
+Actively practicing on HackTheBox Academy and Starting Point machines.
 
-- Academician badge: Introduction to Academy
-- Cyber Starter badge: Introduction to Information Security
-- Solid Basis badge: Network Foundations
+Completed Starting Point machines:
+- Meow (SSH)
+- Fawn (FTP)
+- Dancing (SMB)
+- Redeemer (Redis)
+- Appointment (SQLi)
+- Sequel (MySQL)
 
-Profile: [fridr](https://profile.hackthebox.com/profile/019e3f1e-916d-72e5-902a-8bad1df9de7c)
+Academy badges:
+- Academician: Introduction to Academy
+- Cyber Starter: Introduction to Information Security
+- Solid Basis: Network Foundations
+
+Profile: [fridr](https://app.hackthebox.com/users/3569346)
 
 ---
 

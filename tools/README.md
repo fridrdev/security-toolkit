@@ -11,26 +11,32 @@ Each tool is documented with an explanation of how it works and real results.
 |---|---|---|
 | [port-scanner.py](port-scanner.py) | TCP port scanner using raw sockets | Python |
 | [crypto-demo.py](crypto-demo.py) | Hashing, symmetric and asymmetric encryption demo | Python |
+| [azure-security-checker.py](azure-security-checker.py) | Automated Azure security baseline audit | Python |
 
 ---
 
 ## How to run
 
-Make sure you have Python 3 installed.
-
-Port scanner (no dependencies):
+**Port scanner** (no dependencies):
 ```
 python port-scanner.py
 ```
 
-Crypto demo (requires cryptography library):
+**Crypto demo** (requires cryptography library):
 ```
 pip install cryptography
 python crypto-demo.py
 ```
 
-Before running the port scanner, open the file and change the target IP to your
-own machine or network. Only scan machines you own or have explicit permission to scan.
+**Azure Security Checker** (requires Azure SDK and Azure CLI login):
+```
+pip install azure-identity azure-mgmt-storage azure-mgmt-network
+az login
+python azure-security-checker.py
+```
+
+Before running the port scanner, change the target IP to your own machine
+or network. Only scan machines you own or have explicit permission to scan.
 
 ---
 

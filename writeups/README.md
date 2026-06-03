@@ -14,6 +14,7 @@ and security findings.
 | [Port Scanner Analysis](port-scanner-analysis.md) | TCP scanning, open port analysis, security findings | Python |
 | [Crypto Demo Analysis](crypto-demo-analysis.md) | Hashing, AES, RSA, TLS flow | Python |
 | [Juice Shop Analysis](juice-shop-analysis.md) | SQLi, XSS, security through obscurity | OWASP Juice Shop, Docker |
+| [Azure Security Checker Analysis](azure-security-checker-analysis.md) | Cloud security audit, NSG rules, storage access | Python, Azure SDK |
 
 ---
 
@@ -47,3 +48,6 @@ Every writeup follows the same structure:
 - SQL Injection hands-on exploit
 - Cross-Site Scripting hands-on exploit
 - Security through obscurity weakness
+- Azure storage account public access misconfiguration
+- NSG rules with dangerous ports open to internet
+- Shared Responsibility Model in practice
