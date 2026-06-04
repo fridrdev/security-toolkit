@@ -61,6 +61,9 @@ Completed Starting Point machines:
 - Appointment (SQLi)
 - Sequel (MySQL)
 
+Completed machines:
+- Cap (Easy) — IDOR, pcap analysis, credential reuse, Linux capabilities privilege escalation
+
 Academy badges:
 - Academician: Introduction to Academy
 - Cyber Starter: Introduction to Information Security
