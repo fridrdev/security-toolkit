@@ -17,6 +17,7 @@ Custom security tools built from scratch in Python.
 | [port-scanner.py](tools/port-scanner.py) | TCP port scanner using raw Python sockets |
 | [crypto-demo.py](tools/crypto-demo.py) | Hashing, symmetric and asymmetric encryption demo |
 | [azure-security-checker.py](tools/azure-security-checker.py) | Automated Azure security baseline audit |
+| [log-analyzer.py](tools/log-analyzer.py) | Suspicious login detector from auth logs |
 
 ### Writeups
 Practical security analysis based on real hands-on work.
@@ -28,6 +29,7 @@ Practical security analysis based on real hands-on work.
 | [Crypto Demo Analysis](writeups/crypto-demo-analysis.md) | Hashing, AES, RSA, TLS flow |
 | [Juice Shop Analysis](writeups/juice-shop-analysis.md) | SQLi, XSS, security through obscurity |
 | [Azure Security Checker Analysis](writeups/azure-security-checker-analysis.md) | Cloud security audit, NSG rules, storage access |
+| [Log Analyzer Analysis](writeups/log-analyzer-analysis.md) | Brute force detection, off-hours logins, SIEM concepts |
 
 ### Research
 In-depth technical research documents on security concepts and architectures.
@@ -37,15 +39,7 @@ In-depth technical research documents on security concepts and architectures.
 | [Zero Trust Architecture](research/zero-trust-architecture.md) | Zero Trust model, 5 pillars, Azure implementation |
 
 ### Notes
-Study notes per topic covered. Short and to the point.
-
-| File | Topics |
-|---|---|
-| [OSI, TCP/UDP, IP Addressing](notes/osi-tcp-ip-networking-basics.md) | OSI model, TCP vs UDP, subnetting, Wireshark observations |
-| [DNS, DHCP, HTTP/S, Firewalls, VPN](notes/dns-dhcp-http-firewall-vpn.md) | DNS resolution, DHCP, HTTP vs HTTPS, stateless vs stateful, IPsec vs SSL-VPN |
-| [CIA Triad, Encryption, Authentication](notes/cia-triad-encryption-auth.md) | CIA triad, hashing, AES, RSA, TLS, AAA model |
-| [OWASP, Attacks, CVE/CVSS](notes/owasp-attacks-cve.md) | SQLi, XSS, Broken Auth, IDOR, phishing, MITM, ransomware, CVE, CVSS |
-| [Azure Security, RBAC, Zero Trust](notes/azure-cloud-security-rbac.md) | Shared Responsibility, Defender for Cloud, RBAC, Least Privilege, NSGs |
+Study notes per topic covered. Added at end of study plan.
 
 ---
 

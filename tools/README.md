@@ -12,6 +12,7 @@ Each tool is documented with an explanation of how it works and real results.
 | [port-scanner.py](port-scanner.py) | TCP port scanner using raw sockets | Python |
 | [crypto-demo.py](crypto-demo.py) | Hashing, symmetric and asymmetric encryption demo | Python |
 | [azure-security-checker.py](azure-security-checker.py) | Automated Azure security baseline audit | Python |
+| [log-analyzer.py](log-analyzer.py) | Suspicious login detector from auth logs | Python |
 
 ---
 
@@ -35,8 +36,13 @@ az login
 python azure-security-checker.py
 ```
 
-Before running the port scanner, change the target IP to your own machine
-or network. Only scan machines you own or have explicit permission to scan.
+**Log Analyzer** (no dependencies):
+```
+python log-analyzer.py
+```
+
+The log analyzer automatically creates a sample auth.log file if none exists.
+To analyze a real log file replace samples/auth.log with your own log.
 
 ---
 

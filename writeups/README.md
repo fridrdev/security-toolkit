@@ -15,6 +15,7 @@ and security findings.
 | [Crypto Demo Analysis](crypto-demo-analysis.md) | Hashing, AES, RSA, TLS flow | Python |
 | [Juice Shop Analysis](juice-shop-analysis.md) | SQLi, XSS, security through obscurity | OWASP Juice Shop, Docker |
 | [Azure Security Checker Analysis](azure-security-checker-analysis.md) | Cloud security audit, NSG rules, storage access | Python, Azure SDK |
+| [Log Analyzer Analysis](log-analyzer-analysis.md) | Brute force detection, off-hours logins, SIEM concepts | Python |
 
 ---
 
@@ -51,3 +52,6 @@ Every writeup follows the same structure:
 - Azure storage account public access misconfiguration
 - NSG rules with dangerous ports open to internet
 - Shared Responsibility Model in practice
+- Brute force detection from log analysis
+- Off-hours login anomaly detection
+- SIEM correlation logic in practice
