@@ -29,6 +29,13 @@ Practical security analysis based on real hands-on work.
 | [Juice Shop Analysis](writeups/juice-shop-analysis.md) | SQLi, XSS, security through obscurity |
 | [Azure Security Checker Analysis](writeups/azure-security-checker-analysis.md) | Cloud security audit, NSG rules, storage access |
 
+### Research
+In-depth technical research documents on security concepts and architectures.
+
+| Document | Topic |
+|---|---|
+| [Zero Trust Architecture](research/zero-trust-architecture.md) | Zero Trust model, 5 pillars, Azure implementation |
+
 ### Notes
 Study notes per topic covered. Short and to the point.
 
@@ -38,6 +45,7 @@ Study notes per topic covered. Short and to the point.
 | [DNS, DHCP, HTTP/S, Firewalls, VPN](notes/dns-dhcp-http-firewall-vpn.md) | DNS resolution, DHCP, HTTP vs HTTPS, stateless vs stateful, IPsec vs SSL-VPN |
 | [CIA Triad, Encryption, Authentication](notes/cia-triad-encryption-auth.md) | CIA triad, hashing, AES, RSA, TLS, AAA model |
 | [OWASP, Attacks, CVE/CVSS](notes/owasp-attacks-cve.md) | SQLi, XSS, Broken Auth, IDOR, phishing, MITM, ransomware, CVE, CVSS |
+| [Azure Security, RBAC, Zero Trust](notes/azure-cloud-security-rbac.md) | Shared Responsibility, Defender for Cloud, RBAC, Least Privilege, NSGs |
 
 ---
 
